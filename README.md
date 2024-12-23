@@ -73,3 +73,11 @@ void loop() {
 
 
 ![](https://github.com/FANDINO7/DHT22-CON-LCD/blob/main/PRACTICA%20SENSOR%20DE%20TEMPERATURA%20Y%20LCD.png?raw=true)
+
+
+**desarrollado por**
+
+
+ALBERTO FANDIÑO 
+https://github.com
+
