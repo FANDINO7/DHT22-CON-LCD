@@ -17,6 +17,7 @@ Para poder usar este repositorio necesitas entrar a la plataforma WOKWI.
 
 
 ```
+#include "DHTesp.h"
 #include <LiquidCrystal_I2C.h>
 #define I2C_ADDR    0x27
 #define LCD_COLUMNS 20
@@ -39,30 +40,36 @@ void setup() {
 
 void loop() {
 
+  lcd.clear();
+  lcd.setCursor(2, 0);
+  lcd.print("DIPLOMADO V");
+  lcd.setCursor(2, 1);
+  lcd.print("Mecatronica");
+  delay(2000);
+
+  lcd.clear();
+  lcd.setCursor(2, 0);
+  lcd.print("ALBERTO FANDINO ");
+  lcd.setCursor(2, 1);
+  lcd.print("Ing. Mecanica");
+  delay(2000);
+
   TempAndHumidity  data = dhtSensor.getTempAndHumidity();
   Serial.println("Temp: " + String(data.temperature, 1) + "°C");
   Serial.println("Humidity: " + String(data.humidity, 1) + "%");
   Serial.println("---");
-
- lcd.clear(); 
-  lcd.setCursor(4, 0);
-  lcd.print("MODULO V");
-  lcd.setCursor(6, 1);
-  lcd.print("AIyM");
- delay(2000);
-
-lcd.clear();
+  
   lcd.setCursor(2, 0);
-  lcd.print("diego bahena");
-  lcd.setCursor(6, 1);
-  lcd.print("I.E.E");
-  delay(2000);
-
- lcd.clear(); 
-  lcd.setCursor(0, 0);
-  lcd.print("  Temp: " + String(data.temperature, 1) + "\xDF"+"C  ");
+  lcd.print("Temp: " + String(data.temperature, 1) + "\xDF"+"C  ");
   lcd.setCursor(0, 1);
   lcd.print(" Humidity: " + String(data.humidity, 1) + "% ");
+  lcd.print("Wokwi Online IoT");
+
   delay(2000);
 }
 ```
+
+**RESULTADOS**
+
+
+![]()
