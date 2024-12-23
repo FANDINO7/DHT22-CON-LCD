@@ -14,7 +14,9 @@ Para poder usar este repositorio necesitas entrar a la plataforma WOKWI.
 
 **Instrucciones**
 1.-Abrir la terminal de programación y colocar la siguente codigo 
-´´´
+
+
+```
 #include <LiquidCrystal_I2C.h>
 #define I2C_ADDR    0x27
 #define LCD_COLUMNS 20
@@ -63,4 +65,4 @@ lcd.clear();
   lcd.print(" Humidity: " + String(data.humidity, 1) + "% ");
   delay(2000);
 }
-´´´
+```
